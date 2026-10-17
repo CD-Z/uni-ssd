@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <curriculum id="cur033521">
+    <name>Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+
+  <course id="c184.701" type="VU">
+    <title>Data Modelling</title>
+    <ects>3.0</ects>
+    <!--
+      INVALID: The content model of 'course' requires at least one 'lecturer'
+      element (course (title, ects, lecturer+, prerequisite*, description?)).
+      Here, the mandatory <lecturer> element is completely omitted.
+    -->
+    <description>Foundations of conceptual modeling.</description>
+  </course>
+</catalog>

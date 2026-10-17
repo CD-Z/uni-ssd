@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <curriculum id="cur033521">
+    <name>Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+
+  <course id="c184.701" type="VU" curriculumId="cur033521">
+    <title>Data Modelling</title>
+    <ects>3.0</ects>
+    <lecturer room="HA0210">Neda Tavakoli</lecturer>
+    <description>Foundations of conceptual modeling and ER diagrams.</description>
+  </course>
+
+  <course id="c188.999" type="VU" curriculumId="cur033521">
+    <title>Semi-structured Data</title>
+    <ects>4.0</ects>
+    <lecturer room="HB0105">Reinhard Pichler</lecturer>
+    <lecturer>Stefan Woltran</lecturer>
+    <prerequisite courseRef="c184.701" />
+    <description>Covers XML, DTD, XPath, XQuery, and JSON.</description>
+  </course>
+</catalog>

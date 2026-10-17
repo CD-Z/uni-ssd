@@ -1,0 +1,31 @@
+<!-- DTD for TU Wien Courses and Curricula -->
+<!ELEMENT catalog (curriculum+, course+)>
+
+<!ELEMENT curriculum (name, degree)>
+<!ATTLIST curriculum
+    id ID #REQUIRED
+>
+
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT degree (#PCDATA)>
+
+<!ELEMENT course (title, ects, lecturer+, prerequisite*, description?)>
+<!ATTLIST course
+    id ID #REQUIRED
+    type (VU|VO|UE|SE|PR) #REQUIRED
+    curriculumId IDREF #IMPLIED
+>
+
+<!ELEMENT title (#PCDATA)>
+<!ELEMENT ects (#PCDATA)>
+<!ELEMENT lecturer (#PCDATA)>
+<!ATTLIST lecturer
+    room CDATA #IMPLIED
+>
+
+<!ELEMENT prerequisite EMPTY>
+<!ATTLIST prerequisite
+    courseRef IDREF #REQUIRED
+>
+
+<!ELEMENT description (#PCDATA)>

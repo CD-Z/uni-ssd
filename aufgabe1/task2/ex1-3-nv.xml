@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <!--
+    INVALID: The 'curriculum' element is missing its mandatory 'id' attribute,
+    which is declared as ID #REQUIRED in the DTD.
+  -->
+  <curriculum>
+    <name>Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+
+  <!--
+    INVALID: The attribute 'type' has value 'EX', which is not in the allowed
+    enumeration set (VU|VO|UE|SE|PR).
+  -->
+  <course id="c184.701" type="EX">
+    <title>Data Modelling</title>
+    <ects>3.0</ects>
+    <lecturer>Neda Tavakoli</lecturer>
+  </course>
+</catalog>
