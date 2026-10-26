@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tuWien>
+  <courses>
+    <course id="C003">
+      <title>Database Exercises</title>
+      <ects>1.5</ects>
+      <kind>UE</kind>
+    </course>
+    <course id="C004">
+      <title>Database Systems</title>
+      <ects>3.0</ects>
+      <kind>VO</kind>
+    </course>
+  </courses>
+  <curricula>
+    <curriculum id="BMINF" degree="bachelor">
+      <title>Media Informatics</title>
+      <durationSemesters>6</durationSemesters>
+      <modules>
+        <module>
+          <title>Databases</title>
+          <courseRef ref="C003"/>
+          <courseRef ref="C004"/>
+        </module>
+      </modules>
+    </curriculum>
+  </curricula>
+</tuWien>

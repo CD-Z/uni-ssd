@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:simpleType name="CourseIdType">
+    <xs:restriction base="xs:token">
+      <xs:length value="4"/>
+      <xs:pattern value="C[0-9]{3}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="EctsType">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0"/>
+      <xs:maxInclusive value="30"/>
+      <xs:fractionDigits value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="CourseKindType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="VO"/>
+      <xs:enumeration value="VU"/>
+      <xs:enumeration value="UE"/>
+      <xs:enumeration value="SE"/>
+      <xs:enumeration value="PR"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="DegreeType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="bachelor"/>
+      <xs:enumeration value="master"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:complexType name="CourseType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:token"/>
+      <xs:element name="ects" type="EctsType"/>
+      <xs:element name="kind" type="CourseKindType"/>
+      <xs:element
+        name="language"
+        type="xs:language"
+        default="de"
+        minOccurs="0"
+      />
+      <xs:element
+        name="description"
+        type="xs:string"
+        minOccurs="0"
+      />
+    </xs:sequence>
+
+    <xs:attribute name="id" type="CourseIdType" use="required"/>
+    <xs:attribute name="lecturer" type="xs:token" use="optional"/>
+    <xs:attribute name="active" type="xs:boolean" default="true"/>
+  </xs:complexType>
+
+  <xs:complexType name="ModuleType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:token"/>
+      <xs:element name="courseRef" maxOccurs="unbounded">
+        <xs:complexType>
+          <xs:attribute
+            name="ref"
+            type="CourseIdType"
+            use="required"
+          />
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="CurriculumType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:token"/>
+      <xs:element
+        name="durationSemesters"
+        type="xs:positiveInteger"
+      />
+      <xs:element name="modules">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element
+              name="module"
+              type="ModuleType"
+              maxOccurs="unbounded"
+            />
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+
+    <xs:attribute name="id" type="xs:token" use="required"/>
+    <xs:attribute name="degree" type="DegreeType" use="required"/>
+  </xs:complexType>
+
+  <xs:element name="tuWien">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="courses">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element
+                name="course"
+                type="CourseType"
+                maxOccurs="unbounded"
+              />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+
+        <xs:element name="curricula">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element
+                name="curriculum"
+                type="CurriculumType"
+                maxOccurs="unbounded"
+              />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+
+    <xs:key name="courseIdKey">
+      <xs:selector xpath="courses/course"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+
+    <xs:key name="curriculumIdKey">
+      <xs:selector xpath="curricula/curriculum"/>
+      <xs:field xpath="@id"/>
+    </xs:key>
+
+    <xs:keyref name="courseReferenceKey" refer="courseIdKey">
+      <xs:selector
+        xpath="curricula/curriculum/modules/module/courseRef"
+      />
+      <xs:field xpath="@ref"/>
+    </xs:keyref>
+  </xs:element>
+
+</xs:schema>

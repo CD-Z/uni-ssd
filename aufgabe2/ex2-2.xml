@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tuWien>
+  <courses>
+    <course id="C002" active="true">
+      <title>Advanced Software Engineering</title>
+      <ects>6.0</ects>
+      <kind>SE</kind>
+      <language>en</language>
+    </course>
+  </courses>
+  <curricula>
+    <curriculum id="MSE" degree="master">
+      <title>Software Engineering</title>
+      <durationSemesters>4</durationSemesters>
+      <modules>
+        <module>
+          <title>Advanced Software Development</title>
+          <courseRef ref="C002"/>
+        </module>
+      </modules>
+    </curriculum>
+  </curricula>
+</tuWien>

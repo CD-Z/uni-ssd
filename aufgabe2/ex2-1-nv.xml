@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tuWien>
+  <courses>
+    <course id="C001" lecturer="Anna Beispiel">
+      <title>Introduction to Programming</title>
+      <!-- Invalid: EctsType requires a value greater than zero. -->
+      <ects>-1.0</ects>
+      <kind>VU</kind>
+      <language/>
+      <description>Basic programming concepts and exercises.</description>
+    </course>
+  </courses>
+  <curricula>
+    <curriculum id="BINF" degree="bachelor">
+      <title>Informatics</title>
+      <durationSemesters>6</durationSemesters>
+      <modules>
+        <module>
+          <title>Programming Fundamentals</title>
+          <courseRef ref="C001"/>
+        </module>
+      </modules>
+    </curriculum>
+  </curricula>
+</tuWien>
