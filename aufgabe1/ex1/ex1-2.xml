@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <curriculum id="cur066921">
+    <name>Software Engineering</name>
+    <degree>MSc</degree>
+  </curriculum>
+
+  <course id="c188.998" type="VO">
+    <title>Advanced Database Systems</title>
+    <ects>3.0</ects>
+    <lecturer>Reinhard Pichler</lecturer>
+  </course>
+</catalog>

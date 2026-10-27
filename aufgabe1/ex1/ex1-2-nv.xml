@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <curriculum id="cur033521">
+    <name>Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+
+  <course id="c188.999" type="VU">
+    <title>Semi-structured Data</title>
+    <ects>4.0</ects>
+    <lecturer>Reinhard Pichler</lecturer>
+    <!--
+      INVALID: 'courseRef' is defined as IDREF, but the target ID 'c999.999'
+      does not exist anywhere in the document.
+    -->
+    <prerequisite courseRef="c999.999" />
+  </course>
+</catalog>

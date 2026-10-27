@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalog>
+  <curriculum id="cur033521">
+    <name>Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+  <curriculum id="cur033534">
+    <name>Business Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+
+  <course id="c185.101" type="VO" curriculumId="cur033521">
+    <title>Introduction to Programming 1</title>
+    <ects>3.0</ects>
+    <lecturer>Jens Knoop</lecturer>
+  </course>
+
+  <course id="c185.102" type="UE" curriculumId="cur033521">
+    <title>Introduction to Programming 1 Exercises</title>
+    <ects>3.0</ects>
+    <lecturer>Jens Knoop</lecturer>
+    <prerequisite courseRef="c185.101" />
+  </course>
+
+  <course id="c188.500" type="SE" curriculumId="cur033534">
+    <title>Project in Business Informatics</title>
+    <ects>6.0</ects>
+    <lecturer>Hannes Werthner</lecturer>
+    <prerequisite courseRef="c185.101" />
+    <prerequisite courseRef="c185.102" />
+    <description>Practical application of acquired skills.</description>
+  </course>
+</catalog>

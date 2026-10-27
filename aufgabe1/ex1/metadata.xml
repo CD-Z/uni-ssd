@@ -1,0 +1,32 @@
+<submission exercise-sheet="1">
+  <!-- select the proper exercise sheet number: from 1 to 8  -->
+  <discussion date="2026-10-20" slot="1">
+    <!-- select the date of the session for the work in groups  -->
+    <!-- select the discussion slot of the day: must be 1 or 2  -->
+    <main-student student-id="12419966" />
+    <!-- add your student ID; you are the main student  -->
+    <other-student student-id="12421918" />
+    <other-student student-id="12609219" />
+    <!-- add the student IDs of the colleagues with whom you had the discussion  -->
+  </discussion>
+  <individual-reflection>
+      <question
+        >What are 3 key takeaway technical concepts that you became familiar with when performing the above tasks?</question>
+      Working on the tasks introduced me properly to the DTD syntax, which was my first technical takeaway. Second, I learned, that DTDs strictly enforce the order of child elements. Third, I learned how to constrain attribute values and presence using keywords like #REQUIRED and #IMPLIED.
+      <question
+        >What are 3 key observations and experiences from your work in groups?</question>
+      First, it was hard to follow other students as they explained their custom scenarios, since everyone modeled their domain differently. Second, giving constructive feedback on the fly was difficult while still trying to understand their setup. Third, managing our time properly proved challenging.
+      <question
+        >Do you feel that your feedback to the fellow students was helpful for (i) improving their solutions, (ii) for improving your own understanding of the technical concepts, and (iii) for improving your own solutions?</question>
+      I think my input helped the other students only slightly, as I did not really spot any errors in their files. It did not deepen my own understanding either, because our discussion where short and there weren‘t any advanced concepts. It also did not help my own solution, since time pressure left my turn short.
+      <question
+        >Did you improve your solution after the student discussion? If “yes”, then how? If “no”,then why not?</question>
+      No, as there wasn‘t much feedback and we didn‘t discover any errors.
+      <question
+        >Can you relate the topics covered here with your previous experience in other lectures or other topics in Computer Science that you are familiar with?</question>
+      I can relate the topics to prior experience only to a small degree, mainly because working with tags and attributes felt familiar from writing HTML.
+      <question
+        >What do you think can be done in order to help the learning process in the remaining part of the course?</question>
+      To help the learning process in future exercises, we need better time management during the group discussions so each student has enough room for a proper presentation and feedback round.
+  </individual-reflection>
+</submission>

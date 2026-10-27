@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- TU Wien Curriculum and Course Catalog: Winter Semester 2026 -->
+<curriculumCatalog
+  university="TU Wien"
+  academicYear="2026W"
+>
+  <curriculum code="033521">
+    <name>Informatics</name>
+    <degree>BSc</degree>
+  </curriculum>
+
+  <courses>
+    <course id="188.999" type="VU" ects="4.0">
+      <title>Semi-structured Data</title>
+      <mandatory />
+      <prerequisite courseId="184.701" />
+      <lecturers>
+        <lecturer title="Univ.Prof.">Reinhard Pichler</lecturer>
+      </lecturers>
+      <description>
+        Focuses on data exchange formats such as <keyword>XML</keyword>
+        and DTDs &#x2013; bridging relational models and graph structures.
+      </description>
+    </course>
+
+    <course id="184.701" type="VU" ects="3.0">
+      <title>Data Modelling</title>
+      <description>
+        Foundations of conceptual modeling and schema normalization.
+      </description>
+    </course>
+  </courses>
+</curriculumCatalog>

@@ -1,0 +1,34 @@
+<submission exercise-sheet="1">
+  <!-- select the proper exercise sheet number: from 1 to 8  -->
+  <discussion date="2026-10-20" slot="1">
+    <!-- select the date of the session for the work in groups  -->
+    <!-- select the discussion slot of the day: must be 1 or 2  -->
+    <main-student student-id="12419966" />
+    <!-- add your student ID; you are the main student  -->
+    <other-student student-id="12421918" />
+    <other-student student-id="12609219" />
+    <!-- add the student IDs of the colleagues with whom you had the discussion  -->
+  </discussion>
+  <individual-reflection>
+      <question
+        >What are 3 key takeaway technical concepts that you became familiar with when performing the above tasks?</question>
+      Working on the tasks introduced me properly to the DTD syntax, which was my first technical takeaway. Second, I learned, that DTDs strictly enforce the order of child elements. Third, I learned how to constrain attribute values and presence using keywords like #REQUIRED and #IMPLIED.
+      <question
+        >What are 3 key observations and experiences from your work in groups?</question>
+      First, it was hard to follow other students as they explained their custom scenarios, since everyone modeled their domain differently. Second, giving constructive feedback on the fly was difficult while still trying to understand their setup. Third, managing our time properly proved challenging.
+      <question
+        >Do you feel that your feedback to the fellow students was helpful for (i) improving their solutions, (ii) for improving your own understanding of the technical concepts, and (iii) for improving your own solutions?</question>
+      I think my input helped the other students only slightly, as I did not really spot any errors in their files. It did not deepen my own understanding either, because our discussion where short and there weren‘t any advanced concepts. It also did not help my own solution, since time pressure left my turn short.
+      <question
+        >Did you improve your solution after the student discussion? If “yes”, then how? If “no”,then why not?</question>
+      No, as there wasn‘t much feedback and we didn‘t discover any errors.
+      <question
+        >Can you relate the topics covered here with your previous experience in other lectures or other topics in Computer Science that you are familiar with?</question>
+      I can relate the topics to prior experience only to a small degree, mainly because working with tags and attributes felt familiar from writing HTML.
+      <question
+        >What do you think can be done in order to help the learning process in the remaining part of the course?</question>
+      To help the learning process in future exercises, we need better time management during the group discussions so each student has enough room for a proper presentation and feedback round.
+  </individual-reflection>
+</submission>
+6.48
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtYXRfbnIiOiIxMjQxOTk2NiIsImV4ZXJjaXNlX25hbWUiOiJmcndzMjYiLCJzY29yZSI6Ni40OCwidG90YWwiOjE1LCJzdWJtaXR0ZWRfYXQiOiIyMDI2LTEwLTIwVDExOjI3OjM5LjA3Mzk5OSswMDowMCIsImFuc3dlcnMiOiJleUoySWpveExDSnViMjVqWlNJNklrODVTMlpxTkVOek5uSkNibkJUY0hjaUxDSmtZWFJoSWpvaUwyWmlTR3RtYkZFdk4xcFpZWGQwTDFNclNsUXlTMWg0VkZZNGRqTkthSE1yZWtOWlVEWkJlVzlIVWpGM1JsTmtla2M0TVVwQ05tZzJVMEpRV205TldtUnJjMFV2VWxsM1FqVkJPSGRWVUM4MlEycFdPVmxVVlhCNlJtNUxSMDV1VVhKS1FXVjRjRkpPWTBWUmJUVnViM2hyU0VaRVp6QjJlRTlvWmpGbFZHOUtRM1ZQVjA1RVMxZDZlR3hWTkZFMGFHRXhkVVZpUTNad1lURjBkbXBUZGpZMlRrdGtaVkZsVXpaUE5XUmFiazE0ZG1RMWRTOWxkMnhIWlRCTE0wNUdNalJYYTNVckwzVklkbEowYmxaRU9VNVVlbWhTTlNzdmNDOTBiVGhRYnpOclIyaEdjblpaV0dKbFpTdHRORFV6VjA5cWF5OHhWVzlpZEVscGEwZHVhemxKZEVJek5XaHpWSHBRYkhGS1FVZE5TelZFUm5kTU1WRnlSMUV4U1RnMmVtTm1ORU5zZUc5cWEwMVJkM3BMU2taUFNVWnhiMlYyYTA1T1pEWmphblpKWWpCcWExZ3phQ3RuV210RVIzbElaVVYxWm05V2VXODBWSEl3ZVhGVU5XaFZRVXQ1U2twMmVFSnlRalpFYWpWVWVEWnpRVzVvYWsxNmRFRkJTelV4TlVOR2MwTkhTVUpqYVVFMlJWbE5PVmMxZGxOTE1Xd3lVRWR1ZG0xdmFYQkxUbWQxZGpGT1RqQlRRVUUzVjNGUGEzSXhPR0ZzUkZwdk9YRlhhR1ZMZFZocE9URXJVQzlsWlVwVVRFbDBSalE1V0VndldFNWxZVVoxVGxWYVVEVm1aMnMxTUVaSWExWkdRMDA0YUVSYVRVaGFVa294WlZCeFVFbG5kMjQzV2pBNVdGcEVVRE5WTW5GWmJFTTBTRFJJTkU1WWFsSldTekYxZFdjdlNGVk5kbHBpZFVWNVEzUlVLekZvUkV0cGFIZGFaVVpQV0VjM1NXeGFZMVZDVWtwWlkzWjBTMnhYYUdScVNqaE1ZVzA0Y1ZjeEszZGtTM1J4Tmswd01IVkpOVUpIUmpkblVHSnNhWGhDVUhCdVNrZFdlV00wVTBwVmN6ZzVNemxhVEdsU1NqZHFVRWRxZG5CamEzZFVVVkIyUWxaSU1tRXdSVVJJVVV3cmVWQlNWMGhWY1dwTlpYcHJjMlY0VFhNeVFpdEtVazh3VFhsRlowWlZTVXBuYkU5clZtWTVja0phUzAxU1kxZHdkSE5MVmt4SGRURkhhalpVUlhsSlRrWlFkbGhqVjJNNWQzQTVaVEZIVkZaVlJuTnFNamRXWjJ0bmJtTnZWVEo0U0VWTWQxaE1MMGh5VDBNM1NFWjRWR2RSZVhjNE5sQndSbFYzU0dKUGJsaFRZblJwUVhZMWFXMHJaVkl4Vm1GUmVFMTZibUpyWm1OelIzQlpVbGxKVVc0eU5HMWlXRTlJVVROS1lYZDNZMk0yYTFoeFJGbGxSVU0zUW1sVmJIUTFTVlp1VTNOS09GVjFRWEIzWmxCbGJFcENhbFpZU1ZjemFUWm9UVTkyY1RsVlRWUkxUWFYzY1VObVMxUldSekZyVlVScFlXdFZMMkkxU0dVeFVVUjZZbFF2U0hGamVrUktkelJFUmtoeVN6VkVSWGh0V0U5WFNrTXlibTlDZW5Sck9XTjJVVDA5SW4wPSJ9.SPRHfQ7c1kSTbYAlLpM1uqBUv2kcOsvn10YuXIyArtg
