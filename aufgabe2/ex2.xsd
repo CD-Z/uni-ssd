@@ -1,98 +1,123 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
 
-  <xs:simpleType name="CourseIdType">
+  <xs:simpleType name="CourseNumberType">
     <xs:restriction base="xs:token">
-      <xs:length value="4"/>
-      <xs:pattern value="C[0-9]{3}"/>
+      <xs:length value="7" />
+      <xs:pattern value="[0-9]{3}\.[0-9A-Z]{3}" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="SemesterType">
+    <xs:restriction base="xs:token">
+      <xs:length value="5" />
+      <xs:pattern value="[0-9]{4}[SW]" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="StudyCodeType">
+    <xs:restriction base="xs:token">
+      <xs:length value="10" />
+      <xs:pattern value="UE [0-9]{3} [0-9]{3}" />
     </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="EctsType">
     <xs:restriction base="xs:decimal">
-      <xs:minExclusive value="0"/>
-      <xs:maxInclusive value="30"/>
-      <xs:fractionDigits value="1"/>
+      <xs:minExclusive value="0" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="WeeklyHoursType">
+    <xs:restriction base="xs:decimal">
+      <xs:minExclusive value="0" />
     </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="CourseKindType">
     <xs:restriction base="xs:token">
-      <xs:enumeration value="VO"/>
-      <xs:enumeration value="VU"/>
-      <xs:enumeration value="UE"/>
-      <xs:enumeration value="SE"/>
-      <xs:enumeration value="PR"/>
+      <xs:enumeration value="VO" />
+      <xs:enumeration value="VU" />
+      <xs:enumeration value="UE" />
+      <xs:enumeration value="SE" />
+      <xs:enumeration value="PR" />
+      <xs:enumeration value="EX" />
     </xs:restriction>
   </xs:simpleType>
 
   <xs:simpleType name="DegreeType">
     <xs:restriction base="xs:token">
-      <xs:enumeration value="bachelor"/>
-      <xs:enumeration value="master"/>
+      <xs:enumeration value="bachelor" />
+      <xs:enumeration value="master" />
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="ModuleCategoryType">
+    <xs:restriction base="xs:token">
+      <xs:enumeration value="compulsory" />
+      <xs:enumeration value="narrowElective" />
+      <xs:enumeration value="broadElective" />
     </xs:restriction>
   </xs:simpleType>
 
   <xs:complexType name="CourseType">
     <xs:sequence>
-      <xs:element name="title" type="xs:token"/>
-      <xs:element name="ects" type="EctsType"/>
-      <xs:element name="kind" type="CourseKindType"/>
+      <xs:element name="title" type="xs:token" />
+      <xs:element name="kind" type="CourseKindType" />
+      <xs:element name="weeklyHours" type="WeeklyHoursType" />
+      <xs:element name="ects" type="EctsType" />
       <xs:element
-        name="language"
-        type="xs:language"
-        default="de"
-        minOccurs="0"
-      />
-      <xs:element
-        name="description"
-        type="xs:string"
-        minOccurs="0"
-      />
+                name="deliveryMode"
+                type="xs:token"
+                default="in-person"
+                minOccurs="0"
+            />
+      <xs:element name="description" type="xs:string" minOccurs="0" />
     </xs:sequence>
 
-    <xs:attribute name="id" type="CourseIdType" use="required"/>
-    <xs:attribute name="lecturer" type="xs:token" use="optional"/>
-    <xs:attribute name="active" type="xs:boolean" default="true"/>
+    <xs:attribute name="number" type="CourseNumberType" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="CourseReferenceType">
+    <xs:attribute name="number" type="CourseNumberType" use="required" />
   </xs:complexType>
 
   <xs:complexType name="ModuleType">
     <xs:sequence>
-      <xs:element name="title" type="xs:token"/>
-      <xs:element name="courseRef" maxOccurs="unbounded">
-        <xs:complexType>
-          <xs:attribute
-            name="ref"
-            type="CourseIdType"
-            use="required"
-          />
-        </xs:complexType>
-      </xs:element>
+      <xs:element name="title" type="xs:token" />
+      <xs:element name="ects" type="EctsType" />
+      <xs:element
+                name="courseRef"
+                type="CourseReferenceType"
+                maxOccurs="unbounded"
+            />
+    </xs:sequence>
+
+    <xs:attribute name="category" type="ModuleCategoryType" use="required" />
+  </xs:complexType>
+
+  <xs:complexType name="ExaminationSubjectType">
+    <xs:sequence>
+      <xs:element name="title" type="xs:token" />
+      <xs:element name="module" type="ModuleType" maxOccurs="unbounded" />
     </xs:sequence>
   </xs:complexType>
 
   <xs:complexType name="CurriculumType">
     <xs:sequence>
-      <xs:element name="title" type="xs:token"/>
+      <xs:element name="title" type="xs:token" />
+      <xs:element name="durationSemesters" type="xs:positiveInteger" />
+      <xs:element name="totalEcts" type="EctsType" />
       <xs:element
-        name="durationSemesters"
-        type="xs:positiveInteger"
-      />
-      <xs:element name="modules">
-        <xs:complexType>
-          <xs:sequence>
-            <xs:element
-              name="module"
-              type="ModuleType"
-              maxOccurs="unbounded"
+                name="examinationSubject"
+                type="ExaminationSubjectType"
+                maxOccurs="unbounded"
             />
-          </xs:sequence>
-        </xs:complexType>
-      </xs:element>
     </xs:sequence>
 
-    <xs:attribute name="id" type="xs:token" use="required"/>
-    <xs:attribute name="degree" type="DegreeType" use="required"/>
+    <xs:attribute name="studyCode" type="StudyCodeType" use="required" />
+    <xs:attribute name="degree" type="DegreeType" use="required" />
+    <xs:attribute name="validFrom" type="xs:date" use="required" />
   </xs:complexType>
 
   <xs:element name="tuWien">
@@ -102,10 +127,10 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element
-                name="course"
-                type="CourseType"
-                maxOccurs="unbounded"
-              />
+                                name="course"
+                                type="CourseType"
+                                maxOccurs="unbounded"
+                            />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -114,31 +139,40 @@
           <xs:complexType>
             <xs:sequence>
               <xs:element
-                name="curriculum"
-                type="CurriculumType"
-                maxOccurs="unbounded"
-              />
+                                name="curriculum"
+                                type="CurriculumType"
+                                maxOccurs="unbounded"
+                            />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
       </xs:sequence>
+
+      <xs:attribute name="semester" type="SemesterType" use="required" />
+      <xs:attribute
+                name="extract"
+                type="xs:boolean"
+                use="optional"
+                default="true"
+            />
     </xs:complexType>
 
-    <xs:key name="courseIdKey">
-      <xs:selector xpath="courses/course"/>
-      <xs:field xpath="@id"/>
+    <xs:key name="courseNumberKey">
+      <xs:selector xpath="courses/course" />
+      <xs:field xpath="@number" />
     </xs:key>
 
-    <xs:key name="curriculumIdKey">
-      <xs:selector xpath="curricula/curriculum"/>
-      <xs:field xpath="@id"/>
+    <xs:key name="curriculumKey">
+      <xs:selector xpath="curricula/curriculum" />
+      <xs:field xpath="@studyCode" />
+      <xs:field xpath="@validFrom" />
     </xs:key>
 
-    <xs:keyref name="courseReferenceKey" refer="courseIdKey">
+    <xs:keyref name="courseReferenceKey" refer="courseNumberKey">
       <xs:selector
-        xpath="curricula/curriculum/modules/module/courseRef"
-      />
-      <xs:field xpath="@ref"/>
+                xpath="curricula/curriculum/examinationSubject/module/courseRef"
+            />
+      <xs:field xpath="@number" />
     </xs:keyref>
   </xs:element>
 

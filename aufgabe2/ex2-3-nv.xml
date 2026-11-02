@@ -1,29 +1,46 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tuWien>
+<?xml version="1.0" encoding="UTF-8" ?>
+<tuWien semester="2026W">
   <courses>
-    <course id="C003">
-      <title>Database Exercises</title>
-      <ects>1.5</ects>
-      <kind>UE</kind>
+    <course number="192.134">
+      <title>Grundzüge digitaler Systeme</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
     </course>
-    <course id="C004">
-      <title>Database Systems</title>
-      <ects>3.0</ects>
-      <kind>VO</kind>
+
+    <course number="192.041">
+      <title>Semistrukturierte Daten</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
     </course>
   </courses>
+
   <curricula>
-    <curriculum id="BMINF" degree="bachelor">
-      <title>Media Informatics</title>
+    <curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01">
+      <title>Informatik</title>
       <durationSemesters>6</durationSemesters>
-      <modules>
-        <module>
-          <title>Databases</title>
-          <courseRef ref="C003"/>
-          <!-- Invalid: no course with id C999 exists in this document. -->
-          <courseRef ref="C999"/>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject>
+        <title>Computersysteme</title>
+        <module category="compulsory">
+          <title>Grundzüge digitaler Systeme</title>
+          <ects>6.0</ects>
+          <courseRef number="192.134" />
         </module>
-      </modules>
+      </examinationSubject>
+
+      <examinationSubject>
+        <title>Information Engineering</title>
+        <module category="broadElective">
+          <title>Semistrukturierte Daten</title>
+          <ects>6.0</ects>
+          <!-- Invalid: no course numbered 999.999 is defined here. -->
+          <courseRef number="999.999" />
+        </module>
+      </examinationSubject>
     </curriculum>
   </curricula>
 </tuWien>

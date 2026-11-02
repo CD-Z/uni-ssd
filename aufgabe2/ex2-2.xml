@@ -1,23 +1,28 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tuWien>
+<?xml version="1.0" encoding="UTF-8" ?>
+<tuWien semester="2026W" extract="true">
   <courses>
-    <course id="C002" active="true">
-      <title>Advanced Software Engineering</title>
+    <course number="192.134">
+      <title>Grundzüge digitaler Systeme</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
       <ects>6.0</ects>
-      <kind>SE</kind>
-      <language>en</language>
     </course>
   </courses>
+
   <curricula>
-    <curriculum id="MSE" degree="master">
-      <title>Software Engineering</title>
-      <durationSemesters>4</durationSemesters>
-      <modules>
-        <module>
-          <title>Advanced Software Development</title>
-          <courseRef ref="C002"/>
+    <curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01">
+      <title>Informatik</title>
+      <durationSemesters>6</durationSemesters>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject>
+        <title>Computersysteme</title>
+        <module category="compulsory">
+          <title>Grundzüge digitaler Systeme</title>
+          <ects>6.0</ects>
+          <courseRef number="192.134" />
         </module>
-      </modules>
+      </examinationSubject>
     </curriculum>
   </curricula>
 </tuWien>

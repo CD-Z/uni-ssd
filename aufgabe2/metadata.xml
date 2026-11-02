@@ -1,0 +1,44 @@
+<submission exercise-sheet="2">
+  <!-- select the proper exercise sheet number: from 1 to 8  -->
+  <discussion date="2026-10-27" slot="1">
+    <!-- select the date of the session for the work in groups  -->
+    <!-- select the discussion slot of the day: must be 1 or 2  -->
+    <main-student student-id="12419966" />
+    <!-- add your student ID; you are the main student  -->
+    <other-student student-id="12419989" />
+    <other-student student-id="12416322" />
+    <!-- add the student IDs of the colleagues with whom you had the discussion  -->
+  </discussion>
+  <individual-reflection>
+      <question
+        >What are 3 key takeaway technical concepts that you became familiar with when performing the above tasks?
+        </question>
+      <answer
+        >1. That xsd files are way easier to understand and look at than dtd files.
+            2. That xml schemas are powerful and you can enforce basically anything in the data.
+            3. That you can use RegEx everywhere.
+        </answer>
+      <question
+        >What are 3 key observations and experiences from your work in groups?</question>
+     <answer
+        > First, it was hard to follow other students as they explained their custom scenarios, since everyone modeled their domain differently. Second, giving constructive feedback on the fly was difficult while still trying to understand their setup. Third, managing our time properly proved challenging.
+      </answer>
+      <question
+        >Do you feel that your feedback to the fellow students was helpful for (i) improving their solutions, (ii) for improving your own understanding of the technical concepts, and (iii) for improving your own solutions?</question>
+      <answer
+        >Yes, I think it was helpful for them to enhance their verification logic, but my own understanding wasn't really enhanced. Still I got input to improve my solution.</answer><question
+        >Did you improve your solution after the student discussion? If “yes”, then how? If “no”,then why not?</question>
+      <answer
+        >Yes, I improved my solutions to better reflect the topic "TU Wien Courses and Curricula", based on the other students feedback.
+      </answer>
+      <question
+        >Can you relate the topics covered here with your previous experience in other lectures or other topics in Computer Science that you are familiar with?</question>
+      <answer
+        >I can relate the topics to prior experience only to a small degree, mainly because working with tags and attributes felt familiar from writing HTML. Especially RegEx felt very familiar.
+      </answer>
+      <question
+        >What do you think can be done in order to help the learning process in the remaining part of the course?</question>
+      <answer>
+          Better time managment and proper review of the material before the group discussion.
+  </answer></individual-reflection>
+</submission>

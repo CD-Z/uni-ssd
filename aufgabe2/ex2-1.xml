@@ -1,24 +1,29 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<tuWien>
+<?xml version="1.0" encoding="UTF-8" ?>
+<tuWien semester="2026W">
   <courses>
-    <course id="C001" lecturer="Anna Beispiel">
-      <title>Introduction to Programming</title>
-      <ects>3.0</ects>
+    <course number="192.041">
+      <title>Semistrukturierte Daten</title>
       <kind>VU</kind>
-      <language/>
-      <description>Basic programming concepts and exercises.</description>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode />
     </course>
   </courses>
+
   <curricula>
-    <curriculum id="BINF" degree="bachelor">
-      <title>Informatics</title>
+    <curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01">
+      <title>Informatik</title>
       <durationSemesters>6</durationSemesters>
-      <modules>
-        <module>
-          <title>Programming Fundamentals</title>
-          <courseRef ref="C001"/>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject>
+        <title>Information Engineering</title>
+        <module category="broadElective">
+          <title>Semistrukturierte Daten</title>
+          <ects>6.0</ects>
+          <courseRef number="192.041" />
         </module>
-      </modules>
+      </examinationSubject>
     </curriculum>
   </curricula>
 </tuWien>
