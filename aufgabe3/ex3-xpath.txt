@@ -1,0 +1,26 @@
+XPath 1.0 results for ex3.xml, taken from Aufgabe 2.
+
+1. Titles of VU courses worth at least 6 ECTS
+/tuWien/courses/course[kind='VU' and number(ects) >= 6]/child::title/text()
+Features: predicates, number(), child axis and text() node test.
+Result: Grundzüge digitaler Systeme; Semistrukturierte Daten.
+
+2. Course numbers referenced by compulsory modules
+//module[@category='compulsory']/courseRef/@number
+Features: // and @ abbreviations, attribute predicate.
+Result: 192.134.
+
+3. Title of the course immediately before Semistrukturierte Daten
+//course[@number='192.041']/preceding-sibling::course[1]/title/text()
+Features: reverse preceding-sibling axis; [1] selects the nearest sibling.
+Result: Grundzüge digitaler Systeme.
+
+4. Number of modules in the bachelor curriculum
+count(/tuWien/curricula/curriculum[@degree='bachelor']/examinationSubject/*[self::module])
+Features: count(), wildcard node test, self axis and attribute predicate.
+Result: 2.
+
+5. Total ECTS of distinct courses referenced by broad elective modules
+sum(/tuWien/courses/course[@number = /tuWien/curricula//module[@category='broadElective']/courseRef/@number]/ects)
+Features: sum(), absolute path, // abbreviation and node-set equality.
+Result: 6 ECTS, for Semistrukturierte Daten.

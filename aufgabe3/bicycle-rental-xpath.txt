@@ -1,0 +1,33 @@
+XPath 1.0 results for bicycle-rental.xml
+
+1. Employee IDs
+/bicycle-rental/employees/employee/@id
+Result: e1, e2, e3, e4
+
+2. Electric bicycle models
+/bicycle-rental/available-bicycles/bicycle[@electric="true"]/@model
+Result: Volt City, Alpine E, Cargo E, Urban E, Spare E
+
+3. Number of bicycles in the second rental
+count(/bicycle-rental/active-rentals/rental[2]/rented-bicycle)
+Result: 3
+
+4. Customers collecting more than two bicycles
+/bicycle-rental/active-rentals/rental[count(rented-bicycle) > 2]/station-pickup/@client-name
+Result: Sofia Novak (3 bicycles)
+
+5. Employees assigned to deliver rentals
+/bicycle-rental/employees/employee[@id = /bicycle-rental/active-rentals/rental/delivery-address/@deliveredBy]/name
+Result: Anna Bauer, Max Huber. Anna appears once despite two deliveries.
+
+6. Rental IDs with total price greater than 20
+/bicycle-rental/active-rentals/rental[sum(rented-bicycle/@price) > 20]/@rental-id
+Result: r1 (24), r2 (31), r5 (22). r3 and r4 total exactly 20.
+
+7. Electric bicycle models not in an active rental
+/bicycle-rental/available-bicycles/bicycle[@electric="true" and not(@id = /bicycle-rental/active-rentals/rental/rented-bicycle/@bicycle)]/@model
+Result: Spare E, whose ID has no matching rental reference.
+
+8. Models rented for more than 15
+/bicycle-rental/available-bicycles/bicycle[@id = /bicycle-rental/active-rentals/rental/rented-bicycle[number(@price) > 15]/@bicycle]/@model
+Result: Alpine E (18), Cargo E (20), Folding Mini (22).
