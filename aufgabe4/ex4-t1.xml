@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tuWien semester="2026W" university="TU Wien">
+  <courses>
+    <course number="192.134">
+      <title>Grundzüge digitaler Systeme</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+    </course>
+
+    <course number="192.041">
+      <title>Semistrukturierte Daten</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+    </course>
+
+    <course number="184.735">
+      <title>Datenbanksysteme</title>
+      <kind>VU</kind>
+      <weeklyHours>3.0</weeklyHours>
+      <ects>4.5</ects>
+      <deliveryMode>hybrid</deliveryMode>
+    </course>
+
+    <course number="188.982">
+      <title>Algorithmen und Datenstrukturen</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+    </course>
+
+    <course number="183.585">
+      <title>Verteilte Systeme</title>
+      <kind>VU</kind>
+      <weeklyHours>3.0</weeklyHours>
+      <ects>4.5</ects>
+      <deliveryMode>online</deliveryMode>
+    </course>
+  </courses>
+
+  <curricula>
+    <curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01">
+      <title>Informatik</title>
+      <durationSemesters>6</durationSemesters>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject id="sub-cs">
+        <title>Computersysteme</title>
+        <module category="compulsory">
+          <title>Grundzüge digitaler Systeme</title>
+          <ects>6.0</ects>
+          <courseRef number="192.134" />
+        </module>
+      </examinationSubject>
+
+      <examinationSubject id="sub-ie">
+        <title>Information Engineering</title>
+        <module category="broadElective">
+          <title>Semistrukturierte Daten</title>
+          <ects>6.0</ects>
+          <courseRef number="192.041" />
+        </module>
+        <module category="compulsory">
+          <title>Datenbanksysteme</title>
+          <ects>4.5</ects>
+          <courseRef number="184.735" />
+        </module>
+      </examinationSubject>
+
+      <examinationSubject id="sub-se">
+        <title>Software Engineering</title>
+        <module category="compulsory">
+          <title>Algorithmen und Datenstrukturen</title>
+          <ects>6.0</ects>
+          <courseRef number="188.982" />
+        </module>
+        <module category="freeElective">
+          <title>Verteilte Systeme</title>
+          <ects>4.5</ects>
+          <courseRef number="183.585" />
+        </module>
+      </examinationSubject>
+    </curriculum>
+
+    <curriculum studyCode="UE 033 534" degree="bachelor" validFrom="2026-10-01">
+      <title>Wirtschaftsinformatik</title>
+      <durationSemesters>6</durationSemesters>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject id="sub-winf-ai">
+        <title>Angewandte Informatik</title>
+        <module category="compulsory">
+          <title>Semistrukturierte Daten</title>
+          <ects>6.0</ects>
+          <courseRef number="192.041" />
+        </module>
+        <module category="compulsory">
+          <title>Datenbanksysteme</title>
+          <ects>4.5</ects>
+          <courseRef number="184.735" />
+        </module>
+      </examinationSubject>
+    </curriculum>
+  </curricula>
+</tuWien>
