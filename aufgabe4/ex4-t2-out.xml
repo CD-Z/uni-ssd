@@ -1,7 +1,13 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8" ?>
 <courseCatalog semester="2026W" generated="2026-11-09">
   <courseEntry number="192.134">
-    <details title="Grundzüge digitaler Systeme" kind="VU" ects="6.0" weeklyHours="4.0" deliveryMode="in-person"/>
+    <details
+            title="Grundzüge digitaler Systeme"
+            kind="VU"
+            ects="6.0"
+            weeklyHours="4.0"
+            deliveryMode="in-person"
+        />
     <curriculumMapping totalUsages="1">
       <usage studyCode="UE 033 521" degree="bachelor">
         <curriculumTitle>Informatik</curriculumTitle>
@@ -14,11 +20,17 @@
       </usage>
     </curriculumMapping>
     <statistics>
-      <allocation compulsoryCount="1" electiveCount="0"/>
+      <allocation compulsoryCount="1" electiveCount="0" />
     </statistics>
   </courseEntry>
   <courseEntry number="192.041">
-    <details title="Semistrukturierte Daten" kind="VU" ects="6.0" weeklyHours="4.0" deliveryMode="in-person"/>
+    <details
+            title="Semistrukturierte Daten"
+            kind="VU"
+            ects="6.0"
+            weeklyHours="4.0"
+            deliveryMode="in-person"
+        />
     <curriculumMapping totalUsages="2">
       <usage studyCode="UE 033 521" degree="bachelor">
         <curriculumTitle>Informatik</curriculumTitle>
@@ -40,17 +52,23 @@
       </usage>
     </curriculumMapping>
     <statistics>
-      <allocation compulsoryCount="1" electiveCount="1"/>
+      <allocation compulsoryCount="1" electiveCount="1" />
     </statistics>
   </courseEntry>
   <courseEntry number="184.735">
-    <details title="Datenbanksysteme" kind="VU" ects="4.5" weeklyHours="3.0" deliveryMode="hybrid"/>
+    <details
+            title="Datenbanksysteme"
+            kind="VU"
+            ects="6.0"
+            weeklyHours="3.0"
+            deliveryMode="hybrid"
+        />
     <curriculumMapping totalUsages="2">
       <usage studyCode="UE 033 521" degree="bachelor">
         <curriculumTitle>Informatik</curriculumTitle>
         <examinationSubject id="sub-ie">
           <subjectTitle>Information Engineering</subjectTitle>
-          <moduleRequirement category="compulsory" allocatedEcts="4.5">
+          <moduleRequirement category="compulsory" allocatedEcts="6.0">
             <moduleTitle>Datenbanksysteme</moduleTitle>
           </moduleRequirement>
         </examinationSubject>
@@ -59,18 +77,24 @@
         <curriculumTitle>Wirtschaftsinformatik</curriculumTitle>
         <examinationSubject id="sub-winf-ai">
           <subjectTitle>Angewandte Informatik</subjectTitle>
-          <moduleRequirement category="compulsory" allocatedEcts="4.5">
+          <moduleRequirement category="compulsory" allocatedEcts="6.0">
             <moduleTitle>Datenbanksysteme</moduleTitle>
           </moduleRequirement>
         </examinationSubject>
       </usage>
     </curriculumMapping>
     <statistics>
-      <allocation compulsoryCount="2" electiveCount="0"/>
+      <allocation compulsoryCount="2" electiveCount="0" />
     </statistics>
   </courseEntry>
   <courseEntry number="188.982">
-    <details title="Algorithmen und Datenstrukturen" kind="VU" ects="6.0" weeklyHours="4.0" deliveryMode="in-person"/>
+    <details
+            title="Algorithmen und Datenstrukturen"
+            kind="VU"
+            ects="6.0"
+            weeklyHours="4.0"
+            deliveryMode="in-person"
+        />
     <curriculumMapping totalUsages="1">
       <usage studyCode="UE 033 521" degree="bachelor">
         <curriculumTitle>Informatik</curriculumTitle>
@@ -83,24 +107,30 @@
       </usage>
     </curriculumMapping>
     <statistics>
-      <allocation compulsoryCount="1" electiveCount="0"/>
+      <allocation compulsoryCount="1" electiveCount="0" />
     </statistics>
   </courseEntry>
   <courseEntry number="183.585">
-    <details title="Verteilte Systeme" kind="VU" ects="4.5" weeklyHours="3.0" deliveryMode="online"/>
+    <details
+            title="Verteilte Systeme"
+            kind="VU"
+            ects="6.0"
+            weeklyHours="3.0"
+            deliveryMode="online"
+        />
     <curriculumMapping totalUsages="1">
       <usage studyCode="UE 033 521" degree="bachelor">
         <curriculumTitle>Informatik</curriculumTitle>
         <examinationSubject id="sub-se">
           <subjectTitle>Software Engineering</subjectTitle>
-          <moduleRequirement category="freeElective" allocatedEcts="4.5">
+          <moduleRequirement category="freeElective" allocatedEcts="6.0">
             <moduleTitle>Verteilte Systeme</moduleTitle>
           </moduleRequirement>
         </examinationSubject>
       </usage>
     </curriculumMapping>
     <statistics>
-      <allocation compulsoryCount="0" electiveCount="1"/>
+      <allocation compulsoryCount="0" electiveCount="1" />
     </statistics>
   </courseEntry>
 </courseCatalog>
