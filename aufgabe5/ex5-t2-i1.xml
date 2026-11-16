@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<courseCatalogue semester="2026W">
+  <course number="192.134" language="de">
+    <title>Grundzüge digitaler Systeme</title>
+    <kind>VU</kind>
+    <weeklyHours>4.0</weeklyHours>
+    <ects>6.0</ects>
+    <deliveryMode>in-person</deliveryMode>
+    <lecturers>
+      <lecturer id="l1">
+        <name>Anna Berger</name>
+        <email>anna.berger@tuwien.ac.at</email>
+      </lecturer>
+      <lecturer id="l2">
+        <name>Mehmet Yilmaz</name>
+        <email>mehmet.yilmaz@tuwien.ac.at</email>
+      </lecturer>
+    </lecturers>
+    <assessments>
+      <assessment type="written" weight="0.4" />
+      <assessment type="project" weight="0.6" />
+    </assessments>
+  </course>
+
+  <course number="192.041" language="de">
+    <title>Semistrukturierte Daten</title>
+    <kind>VU</kind>
+    <weeklyHours>4.0</weeklyHours>
+    <ects>6.0</ects>
+    <deliveryMode>in-person</deliveryMode>
+    <lecturers>
+      <lecturer id="l3">
+        <name>Sophie Novak</name>
+        <email>sophie.novak@tuwien.ac.at</email>
+      </lecturer>
+      <lecturer id="l4">
+        <name>Jonas Weber</name>
+        <email>jonas.weber@tuwien.ac.at</email>
+      </lecturer>
+    </lecturers>
+    <assessments>
+      <assessment type="written" weight="0.4" />
+      <assessment type="project" weight="0.6" />
+    </assessments>
+  </course>
+
+  <course number="184.735" language="de">
+    <title>Datenbanksysteme</title>
+    <kind>VU</kind>
+    <weeklyHours>3.0</weeklyHours>
+    <ects>6.0</ects>
+    <deliveryMode>hybrid</deliveryMode>
+    <lecturers>
+      <lecturer id="l5">
+        <name>Karim Haddad</name>
+        <email>karim.haddad@tuwien.ac.at</email>
+      </lecturer>
+      <lecturer id="l6">
+        <name>Nora Klein</name>
+        <email>nora.klein@tuwien.ac.at</email>
+      </lecturer>
+    </lecturers>
+    <assessments>
+      <assessment type="written" weight="0.5" />
+      <assessment type="project" weight="0.5" />
+    </assessments>
+  </course>
+
+  <course number="188.982" language="de">
+    <title>Algorithmen und Datenstrukturen</title>
+    <kind>VU</kind>
+    <weeklyHours>4.0</weeklyHours>
+    <ects>6.0</ects>
+    <deliveryMode>in-person</deliveryMode>
+    <lecturers>
+      <lecturer id="l7">
+        <name>Marta Steiner</name>
+        <email>marta.steiner@tuwien.ac.at</email>
+      </lecturer>
+      <lecturer id="l8">
+        <name>Paul Gruber</name>
+        <email>paul.gruber@tuwien.ac.at</email>
+      </lecturer>
+    </lecturers>
+    <assessments>
+      <assessment type="written" weight="0.6" />
+      <assessment type="exercise" weight="0.4" />
+    </assessments>
+  </course>
+
+  <course number="183.585" language="en">
+    <title>Verteilte Systeme</title>
+    <kind>VU</kind>
+    <weeklyHours>3.0</weeklyHours>
+    <ects>6.0</ects>
+    <deliveryMode>online</deliveryMode>
+    <lecturers>
+      <lecturer id="l9">
+        <name>David Chen</name>
+        <email>david.chen@tuwien.ac.at</email>
+      </lecturer>
+      <lecturer id="l10">
+        <name>Olivia Brown</name>
+        <email>olivia.brown@tuwien.ac.at</email>
+      </lecturer>
+    </lecturers>
+    <assessments>
+      <assessment type="written" weight="0.5" />
+      <assessment type="project" weight="0.5" />
+    </assessments>
+  </course>
+
+  <course number="186.815" language="de">
+    <title>Formale Methoden der Informatik</title>
+    <kind>VU</kind>
+    <weeklyHours>3.0</weeklyHours>
+    <ects>6.0</ects>
+    <deliveryMode>in-person</deliveryMode>
+    <lecturers>
+      <lecturer id="l11">
+        <name>Felix Bauer</name>
+        <email>felix.bauer@tuwien.ac.at</email>
+      </lecturer>
+      <lecturer id="l12">
+        <name>Clara Schmitt</name>
+        <email>clara.schmitt@tuwien.ac.at</email>
+      </lecturer>
+    </lecturers>
+    <assessments>
+      <assessment type="written" weight="0.7" />
+      <assessment type="exercise" weight="0.3" />
+    </assessments>
+  </course>
+</courseCatalogue>
