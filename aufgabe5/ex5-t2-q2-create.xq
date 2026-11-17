@@ -4,7 +4,7 @@
    Features: computed element constructors, computed attribute constructors,
              dynamic element name, dynamic attribute name and value; join.
    Run: java -cp /tmp/basex.jar org.basex.BaseX ex5-t2-q2-create.xq
-   Expected: 6 course_ elements, 7 curriculum_ elements, 6 moduleCount_ attributes.
+   Expected: 2 course_ elements, 2 curriculum_ elements, 2 moduleCount_ attributes.
 :)
 <courseIndex>{
   for $c in doc('ex5-t2-i1.xml')/courseCatalogue/course
@@ -22,7 +22,7 @@
     <lecturers>{
       for $l in $c/lecturers/lecturer
       return <lecturer id="{string($l/@id)}"
-                       email="{string($l/@email)}">{string($l/name)}</lecturer>
+                       email="{string($l/email)}">{string($l/name)}</lecturer>
     }</lecturers>,
     <assessments>{
       for $a in $c/assessments/assessment

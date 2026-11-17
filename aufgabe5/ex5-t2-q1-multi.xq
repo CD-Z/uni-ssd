@@ -3,7 +3,7 @@
             courseRef/@number and enrich the module with course data.
    Features: nested for, let, where, order by, return; join across two documents.
    Run: java -cp /tmp/basex.jar org.basex.BaseX ex5-t2-q1-multi.xq
-   Expected: 7 module elements, ordered by study code, subject, category.
+   Expected: 2 module elements, ordered by study code, subject, category.
 :)
 <curriculumModules>{
   for $c in doc('ex5-t2-i2.xml')/curricula/curriculum

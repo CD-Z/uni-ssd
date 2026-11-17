@@ -3,7 +3,7 @@
             evaluations, and sort by average rating.
    Features: for, let, where, order by, return; count, avg, max.
    Run: java -cp /tmp/basex.jar org.basex.BaseX ex5-t1-q1.xq
-   Expected: 6 courseSummary elements, highest average first.
+   Expected: 3 courseSummary elements, highest average first.
 :)
 <courseSummaries>{
   for $c in doc('ex5-t1.xml')/tuWien/courses/course

@@ -1,21 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <tuWien semester="2026W" university="TU Wien">
   <courses>
-    <course number="192.134" ects="6.0" language="de">
+    <course number="192.134" ects="6.0">
       <title>Grundzüge digitaler Systeme</title>
       <kind>VU</kind>
-      <weeklyHours>4.0</weeklyHours>
-      <deliveryMode>in-person</deliveryMode>
-      <lecturers>
-        <lecturer id="l1">
-          <name>Anna Berger</name>
-          <email>anna.berger@tuwien.ac.at</email>
-        </lecturer>
-        <lecturer id="l2">
-          <name>Mehmet Yilmaz</name>
-          <email>mehmet.yilmaz@tuwien.ac.at</email>
-        </lecturer>
-      </lecturers>
       <evaluations>
         <evaluation rating="5" year="2025">
           <author>Anna Berger</author>
@@ -25,64 +13,13 @@
           <author>Mehmet Yilmaz</author>
           <comment>Good pace, but the exercises are demanding.</comment>
         </evaluation>
-        <evaluation rating="4" year="2024">
-          <author>Lea Hoffmann</author>
-          <comment>Well structured introduction to digital systems.</comment>
-        </evaluation>
       </evaluations>
     </course>
 
-    <course number="192.041" ects="6.0" language="de">
-      <title>Semistrukturierte Daten</title>
-      <kind>VU</kind>
-      <weeklyHours>4.0</weeklyHours>
-      <deliveryMode>in-person</deliveryMode>
-      <lecturers>
-        <lecturer id="l3">
-          <name>Sophie Novak</name>
-          <email>sophie.novak@tuwien.ac.at</email>
-        </lecturer>
-        <lecturer id="l4">
-          <name>Jonas Weber</name>
-          <email>jonas.weber@tuwien.ac.at</email>
-        </lecturer>
-      </lecturers>
-      <evaluations>
-        <evaluation rating="5" year="2025">
-          <author>Sophie Novak</author>
-          <comment>The XQuery exercises are practical and well explained.</comment>
-        </evaluation>
-        <evaluation rating="5" year="2026">
-          <author>Jonas Weber</author>
-          <comment>Excellent mix of theory and hands-on work.</comment>
-        </evaluation>
-        <evaluation rating="4" year="2025">
-          <author>Elena Fischer</author>
-          <comment>Useful course, although the workload is high.</comment>
-        </evaluation>
-      </evaluations>
-    </course>
-
-    <course number="184.735" ects="6.0" language="de">
+    <course number="184.735" ects="6.0">
       <title>Datenbanksysteme</title>
       <kind>VU</kind>
-      <weeklyHours>3.0</weeklyHours>
-      <deliveryMode>hybrid</deliveryMode>
-      <lecturers>
-        <lecturer id="l5">
-          <name>Karim Haddad</name>
-          <email>karim.haddad@tuwien.ac.at</email>
-        </lecturer>
-        <lecturer id="l6">
-          <name>Nora Klein</name>
-          <email>nora.klein@tuwien.ac.at</email>
-        </lecturer>
-      </lecturers>
       <evaluations>
-        <evaluation rating="3" year="2025">
-          <author>Karim Haddad</author>
-          <comment>Solid content, but the slides are outdated.</comment>
-        </evaluation>
         <evaluation rating="4" year="2026">
           <author>Nora Klein</author>
           <comment>Good database practice and helpful feedback.</comment>
@@ -94,52 +31,9 @@
       </evaluations>
     </course>
 
-    <course number="188.982" ects="6.0" language="de">
-      <title>Algorithmen und Datenstrukturen</title>
-      <kind>VU</kind>
-      <weeklyHours>4.0</weeklyHours>
-      <deliveryMode>in-person</deliveryMode>
-      <lecturers>
-        <lecturer id="l7">
-          <name>Marta Steiner</name>
-          <email>marta.steiner@tuwien.ac.at</email>
-        </lecturer>
-        <lecturer id="l8">
-          <name>Paul Gruber</name>
-          <email>paul.gruber@tuwien.ac.at</email>
-        </lecturer>
-      </lecturers>
-      <evaluations>
-        <evaluation rating="4" year="2024">
-          <author>Marta Steiner</author>
-          <comment>Challenging but rewarding algorithms course.</comment>
-        </evaluation>
-        <evaluation rating="3" year="2025">
-          <author>Paul Gruber</author>
-          <comment>The proofs are dense and the pace is fast.</comment>
-        </evaluation>
-        <evaluation rating="3" year="2026">
-          <author>Sara Lehner</author>
-          <comment>Useful exercises, lectures could be clearer.</comment>
-        </evaluation>
-      </evaluations>
-    </course>
-
-    <course number="183.585" ects="6.0" language="en">
+    <course number="183.585" ects="6.0">
       <title>Verteilte Systeme</title>
       <kind>VU</kind>
-      <weeklyHours>3.0</weeklyHours>
-      <deliveryMode>online</deliveryMode>
-      <lecturers>
-        <lecturer id="l9">
-          <name>David Chen</name>
-          <email>david.chen@tuwien.ac.at</email>
-        </lecturer>
-        <lecturer id="l10">
-          <name>Olivia Brown</name>
-          <email>olivia.brown@tuwien.ac.at</email>
-        </lecturer>
-      </lecturers>
       <evaluations>
         <evaluation rating="5" year="2025">
           <author>David Chen</author>
@@ -148,41 +42,6 @@
         <evaluation rating="5" year="2026">
           <author>Olivia Brown</author>
           <comment>Well organised and very relevant.</comment>
-        </evaluation>
-        <evaluation rating="5" year="2024">
-          <author>Lukas Maier</author>
-          <comment>One of the best courses in the programme.</comment>
-        </evaluation>
-      </evaluations>
-    </course>
-
-    <course number="186.815" ects="6.0" language="de">
-      <title>Formale Methoden der Informatik</title>
-      <kind>VU</kind>
-      <weeklyHours>3.0</weeklyHours>
-      <deliveryMode>in-person</deliveryMode>
-      <lecturers>
-        <lecturer id="l11">
-          <name>Felix Bauer</name>
-          <email>felix.bauer@tuwien.ac.at</email>
-        </lecturer>
-        <lecturer id="l12">
-          <name>Clara Schmitt</name>
-          <email>clara.schmitt@tuwien.ac.at</email>
-        </lecturer>
-      </lecturers>
-      <evaluations>
-        <evaluation rating="2" year="2024">
-          <author>Felix Bauer</author>
-          <comment>The formalism is hard to follow without more examples.</comment>
-        </evaluation>
-        <evaluation rating="3" year="2025">
-          <author>Clara Schmitt</author>
-          <comment>Interesting topic, uneven presentation.</comment>
-        </evaluation>
-        <evaluation rating="5" year="2026">
-          <author>Nina Roth</author>
-          <comment>Excellent lectures after the midterm.</comment>
         </evaluation>
       </evaluations>
     </course>
@@ -206,28 +65,9 @@
       <examinationSubject id="sub-ie">
         <title>Information Engineering</title>
         <module category="broadElective">
-          <title>Semistrukturierte Daten</title>
-          <ects>6.0</ects>
-          <courseRef number="192.041" />
-        </module>
-        <module category="compulsory">
           <title>Datenbanksysteme</title>
           <ects>6.0</ects>
           <courseRef number="184.735" />
-        </module>
-      </examinationSubject>
-
-      <examinationSubject id="sub-se">
-        <title>Software Engineering</title>
-        <module category="compulsory">
-          <title>Algorithmen und Datenstrukturen</title>
-          <ects>6.0</ects>
-          <courseRef number="188.982" />
-        </module>
-        <module category="freeElective">
-          <title>Verteilte Systeme</title>
-          <ects>6.0</ects>
-          <courseRef number="183.585" />
         </module>
       </examinationSubject>
     </curriculum>
@@ -240,14 +80,9 @@
       <examinationSubject id="sub-winf-ai">
         <title>Angewandte Informatik</title>
         <module category="compulsory">
-          <title>Semistrukturierte Daten</title>
+          <title>Grundzüge digitaler Systeme</title>
           <ects>6.0</ects>
-          <courseRef number="192.041" />
-        </module>
-        <module category="compulsory">
-          <title>Datenbanksysteme</title>
-          <ects>6.0</ects>
-          <courseRef number="184.735" />
+          <courseRef number="192.134" />
         </module>
       </examinationSubject>
     </curriculum>

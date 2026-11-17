@@ -2,21 +2,21 @@
 
 ## 1. Ausgangslage und Szenario
 
-Die Übung 5 besteht aus zwei Teilen. In Aufgabe 1 sollte ein nicht-triviales XML-Dokument aus dem eigenen Szenario mit XQuery abgefragt werden. In Aufgabe 2 sollten zwei XML-Dokumente miteinander verknüpft und mit XQuery neu strukturiert werden. Mein Szenario ist „TU Wien Courses and Curricula“, das bereits in den Aufgaben 3 und 4 verwendet wurde. Ich habe die Daten für Aufgabe 1 um Vortragende und Bewertungen erweitert und die Lösung im Verzeichnis `aufgabe5/` abgelegt.
+Die Übung 5 besteht aus zwei Teilen. In Aufgabe 1 sollte ein nicht-triviales XML-Dokument aus dem eigenen Szenario mit XQuery abgefragt werden. In Aufgabe 2 sollten zwei XML-Dokumente miteinander verknüpft und mit XQuery neu strukturiert werden. Mein Szenario ist „TU Wien Courses and Curricula“, das bereits in den Aufgaben 3 und 4 verwendet wurde. Ich habe die Daten für Aufgabe 1 um Bewertungen erweitert und die Beispiele bewusst klein gehalten. Die Lösung liegt im Verzeichnis `aufgabe5/`.
 
 ## 2. Aufgabe 1: Abfragen eines Dokuments
 
 ### 2.1 Datenmodell
 
-`ex5-t1.xml` beschreibt einen Ausschnitt des TU-Wien-Lehrangebots. Die Wurzel `tuWien` enthält `courses` und `curricula`. Jeder `course` hat die Attribute `number`, `ects` und `language` sowie die Kindelemente `title`, `kind`, `weeklyHours`, `deliveryMode`, `lecturers` und `evaluations`. Ein `lecturer` hat `id`, `name` und `email`; eine `evaluation` hat `rating`, `year`, `author` und `comment`. Die `curricula` enthalten `curriculum`-Elemente mit `studyCode`, `degree`, `validFrom`, `examinationSubject` und `module`. Ein `module` verweist über `courseRef/@number` auf einen Kurs.
+`ex5-t1.xml` beschreibt einen Ausschnitt des TU-Wien-Lehrangebots. Die Wurzel `tuWien` enthält `courses` und `curricula`. Jeder `course` hat die Attribute `number` und `ects` sowie die Kindelemente `title`, `kind` und `evaluations`. Eine `evaluation` hat `rating`, `year`, `author` und `comment`. Die `curricula` enthalten `curriculum`-Elemente mit `studyCode`, `degree`, `validFrom`, `examinationSubject` und `module`. Ein `module` verweist über `courseRef/@number` auf einen Kurs.
 
-Das Dokument hat 271 Elemente und Attribute. Die tiefste Stelle ist `tuWien/courses/course/evaluations/evaluation/author`; `author` hat fünf Vorfahren, das Dokument erreicht also Tiefe 6 und erfüllt die geforderte Tiefe 5. Eine Zählung der Eingabeknoten, deren Wert in mindestens einer Ausgabe vorkommt, ergab 116 Knoten. Damit sind deutlich mehr als die geforderten 20 Eingabeknoten in den Ausgaben repräsentiert.
+Das Dokument hat 94 Elemente und Attribute. Die tiefste Stelle ist `tuWien/courses/course/evaluations/evaluation/author`; `author` hat fünf Vorfahren, das Dokument erreicht also Tiefe 6 und erfüllt die geforderte Tiefe 5. Eine Zählung der Eingabeknoten, deren Wert in mindestens einer Ausgabe vorkommt, ergab 50 Knoten. Das sind mehr als die geforderten 20.
 
 ### 2.2 Abfrage 1: Bewertungsübersicht
 
 `ex5-t1-q1.xq` berechnet pro Kurs die Anzahl der Bewertungen und den Durchschnitt der Ratings. Kurse mit weniger als zwei Bewertungen werden mit `where` ausgefiltert. Das Ergebnis wird mit `order by $avg descending, $c/title ascending` sortiert. Für jede Zeile wird ein neues `courseSummary`-Element mit Attributen für Kursnummer, ECTS, Titel, Art, Anzahl und Durchschnitt erzeugt. Zusätzlich werden die beste Bewertung mit Autor, Jahr und Kommentar als Kindelemente ausgegeben.
 
-Die Abfrage verwendet alle fünf FLWOR-Klauseln: `for`, `let`, `where`, `order by` und `return`. Als Aggregationen kommen `count`, `avg` und `max` zum Einsatz. Das Ergebnis sind sechs `courseSummary`-Elemente, angeführt von „Verteilte Systeme“ mit Durchschnitt 5.
+Die Abfrage verwendet alle fünf FLWOR-Klauseln: `for`, `let`, `where`, `order by` und `return`. Als Aggregationen kommen `count`, `avg` und `max` zum Einsatz. Das Ergebnis sind drei `courseSummary`-Elemente, angeführt von „Verteilte Systeme“ mit Durchschnitt 5.
 
 ### 2.3 Abfrage 2: Quantifizierte Ausdrücke
 
@@ -27,11 +27,11 @@ where (some $e in $evals satisfies $e/@rating = 5)
   and (every $e in $evals satisfies $e/@rating >= 3)
 ```
 
-`some` ist wahr, wenn mindestens ein Element die Bedingung erfüllt. `every` ist wahr, wenn alle Elemente die Bedingung erfüllen. Bei einer leeren Sequenz ist `some` falsch und `every` wahr; dieser Fall der leeren Allquantifizierung ist ein wichtiger Unterschied zu einer naiven Schleife. Das Ergebnis sind drei Kurse, sortiert nach Titel.
+`some` ist wahr, wenn mindestens ein Element die Bedingung erfüllt. `every` ist wahr, wenn alle Elemente die Bedingung erfüllen. Bei einer leeren Sequenz ist `some` falsch und `every` wahr; dieser Fall der leeren Allquantifizierung ist ein wichtiger Unterschied zu einer naiven Schleife. Das Ergebnis sind zwei Kurse, sortiert nach Titel.
 
 ### 2.4 Abfrage 3: Aggregation pro Curriculum
 
-`ex5-t1-q3.xq` gruppiert nicht über `group by`, sondern iteriert über die `curriculum`-Knoten. Für jedes Curriculum werden die Module und Prüfungsfächer mit `let` gebunden, die ECTS-Summe mit `sum` berechnet und die Anzahl mit `count` ermittelt. Die Ausgabe wird nach `moduleEcts` absteigend sortiert. Das Ergebnis ist „Informatik“ mit 3 Fächern, 5 Modulen und 30 ECTS vor „Wirtschaftsinformatik“ mit 1 Fach, 2 Modulen und 12 ECTS.
+`ex5-t1-q3.xq` gruppiert nicht über `group by`, sondern iteriert über die `curriculum`-Knoten. Für jedes Curriculum werden die Module und Prüfungsfächer mit `let` gebunden, die ECTS-Summe mit `sum` berechnet und die Anzahl mit `count` ermittelt. Die Ausgabe wird nach `moduleEcts` absteigend sortiert. Das Ergebnis ist „Informatik“ mit 2 Fächern, 2 Modulen und 12 ECTS vor „Wirtschaftsinformatik“ mit 1 Fach, 1 Modul und 6 ECTS.
 
 ### 2.5 Feature-Matrix
 
@@ -49,9 +49,9 @@ where (some $e in $evals satisfies $e/@rating = 5)
 
 ### 3.1 Eingabedokumente
 
-`ex5-t2-i1.xml` ist ein Kurskatalog. Jeder Kurs enthält Titel, Art, Wochenstunden, ECTS, Abhaltungsmodus, Vortragende mit ID, Name und E-Mail sowie Prüfungsleistungen mit Typ und Gewicht. Das Dokument hat 146 Elemente und Attribute und erreicht Tiefe 5.
+`ex5-t2-i1.xml` ist ein Kurskatalog. Jeder Kurs enthält Titel, Art, Wochenstunden, ECTS, Abhaltungsmodus, Vortragende mit ID, Name und E-Mail sowie Prüfungsleistungen mit Typ und Gewicht. Das Dokument hat 42 Elemente und Attribute und erreicht Tiefe 5.
 
-`ex5-t2-i2.xml` beschreibt die Curricula. Jedes `curriculum` enthält `studyCode`, `degree`, `validFrom`, Titel, Semesterdauer, ECTS und `examinationSubject`-Elemente. Darunter liegen `module` mit `category`, `title`, `ects` und `courseRef/@number`. Das Dokument hat 69 Elemente und Attribute und erreicht Tiefe 5. Die Verweise `courseRef/@number` verbinden beide Dokumente.
+`ex5-t2-i2.xml` beschreibt die Curricula. Jedes `curriculum` enthält `studyCode`, `degree`, `validFrom`, Titel, Semesterdauer, ECTS und `examinationSubject`-Elemente. Darunter liegen `module` mit `category`, `title`, `ects` und `courseRef/@number`. Das Dokument hat 33 Elemente und Attribute und erreicht Tiefe 5. Die Verweise `courseRef/@number` verbinden beide Dokumente.
 
 ### 3.2 Join-Abfrage
 
@@ -63,7 +63,7 @@ let $course := doc('ex5-t2-i1.xml')/courseCatalogue/course
 where exists($course)
 ```
 
-Das ist ein Gleichheits-Join über `courseRef/@number` und `course/@number`. Die verschachtelten `for`-Schleifen erzeugen zunächst alle Kombinationen aus Curriculum, Prüfungsfach und Modul. Der `let`-Ausdruck sucht den passenden Kurs, und `where exists($course)` entfernt Module ohne Kurs. Die Ausgabe enthält pro Modul ein `module`-Element mit Daten aus beiden Dokumenten, darunter Studienkennzahl, Curriculum, Fach, Kategorie, Modultitel und ECTS sowie Kursnummer, Kurstitel, Art, Wochenstunden, Abhaltungsmodus, Sprache und Vortragende. Das Ergebnis sind 7 Module und 14 Vortragende.
+Das ist ein Gleichheits-Join über `courseRef/@number` und `course/@number`. Die verschachtelten `for`-Schleifen erzeugen zunächst alle Kombinationen aus Curriculum, Prüfungsfach und Modul. Der `let`-Ausdruck sucht den passenden Kurs, und `where exists($course)` entfernt Module ohne Kurs. Die Ausgabe enthält pro Modul ein `module`-Element mit Daten aus beiden Dokumenten, darunter Studienkennzahl, Curriculum, Fach, Kategorie, Modultitel und ECTS sowie Kursnummer, Kurstitel, Art, Wochenstunden, Abhaltungsmodus, Sprache und Vortragende. Das Ergebnis sind 2 Module und 2 Vortragende.
 
 ### 3.3 Dynamische Konstruktoren
 
@@ -78,7 +78,7 @@ element {concat('course_', translate(string($c/@number), '.-', '__'))} {
 
 Der Elementname entsteht aus der Kursnummer. Punkte und Bindestriche werden durch Unterstriche ersetzt, damit ein gültiger NCName entsteht. Der Attributname `moduleCount_<n>` enthält die Anzahl der Module, die auf den Kurs verweisen; auch der Attributwert ist dynamisch. Für jedes Curriculum, das den Kurs verwendet, wird ein weiteres berechnetes Element `curriculum_<studyCode>` mit dynamischem `degree`-Attribut erzeugt.
 
-Die Ausgabe enthält 6 `course_*`-Elemente, 7 `curriculum_*`-Elemente und 6 `moduleCount_*`-Attribute. Sie hat 167 Elemente und Attribute und erreicht Tiefe 5. Der Kurs 186.815 wird von keinem Curriculum verwendet und erscheint deshalb mit `moduleCount_0`. Das macht den Join und die dynamische Namensbildung gut sichtbar.
+Die Ausgabe enthält 2 `course_*`-Elemente, 2 `curriculum_*`-Elemente und 2 `moduleCount_*`-Attribute. Sie hat 49 Elemente und Attribute und erreicht Tiefe 5. Die dynamischen Namen sind `course_192_134`, `course_192_041`, `curriculum_UE_033_521`, `curriculum_UE_033_534` und `moduleCount_1`.
 
 ## 4. Theoretische Grundlagen
 
@@ -115,14 +115,14 @@ Als XQuery-Prozessor habe ich BaseX 13.0 verwendet. Die JAR-Datei liegt nur unte
 | Prüfung | Ergebnis |
 |---|---|
 | Wohlgeformtheit aller XML-Dateien | bestanden |
-| `ex5-t1.xml`: Knoten / Elemente mit vier Vorfahren | 271 / 41 |
-| q1 / q2 / q3 | 6 / 3 / 2 Ergebnisse |
-| `ex5-t2-i1.xml`: Knoten | 146 |
-| `ex5-t2-i2.xml`: Knoten | 69 |
-| Join-Ausgabe: Module / Vortragende | 7 / 14 |
-| Konstruktor-Ausgabe: course_ / curriculum_ / moduleCount_ | 6 / 7 / 6 |
-| Konstruktor-Ausgabe: Knoten / Elemente mit drei Vorfahren | 167 / 31 |
-| Repräsentierte Eingabeknoten (T1 / T2-i1 / T2-i2) | 116 / 99 / 44 |
+| `ex5-t1.xml`: Knoten / Elemente mit vier Vorfahren | 94 / 12 |
+| q1 / q2 / q3 | 3 / 2 / 2 Ergebnisse |
+| `ex5-t2-i1.xml`: Knoten | 42 |
+| `ex5-t2-i2.xml`: Knoten | 33 |
+| Join-Ausgabe: Module / Vortragende | 2 / 2 |
+| Konstruktor-Ausgabe: course_ / curriculum_ / moduleCount_ | 2 / 2 / 2 |
+| Konstruktor-Ausgabe: Knoten / Elemente mit drei Vorfahren | 49 / 8 |
+| Repräsentierte Eingabeknoten (T1 / T2-i1 / T2-i2) | 50 / 28 / 22 |
 
 ## 6. Dateien
 

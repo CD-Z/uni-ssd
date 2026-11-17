@@ -3,7 +3,7 @@
             evaluation is at least 3.
    Features: for, let, where, order by, return; some, every; count, avg.
    Run: java -cp /tmp/basex.jar org.basex.BaseX ex5-t1-q2.xq
-   Expected: 3 course elements.
+   Expected: 2 course elements.
 :)
 <acclaimedCourses>{
   for $c in doc('ex5-t1.xml')/tuWien/courses/course

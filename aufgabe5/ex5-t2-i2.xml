@@ -13,34 +13,6 @@
         <courseRef number="192.134" />
       </module>
     </examinationSubject>
-
-    <examinationSubject id="sub-ie">
-      <title>Information Engineering</title>
-      <module category="broadElective">
-        <title>Semistrukturierte Daten</title>
-        <ects>6.0</ects>
-        <courseRef number="192.041" />
-      </module>
-      <module category="compulsory">
-        <title>Datenbanksysteme</title>
-        <ects>6.0</ects>
-        <courseRef number="184.735" />
-      </module>
-    </examinationSubject>
-
-    <examinationSubject id="sub-se">
-      <title>Software Engineering</title>
-      <module category="compulsory">
-        <title>Algorithmen und Datenstrukturen</title>
-        <ects>6.0</ects>
-        <courseRef number="188.982" />
-      </module>
-      <module category="freeElective">
-        <title>Verteilte Systeme</title>
-        <ects>6.0</ects>
-        <courseRef number="183.585" />
-      </module>
-    </examinationSubject>
   </curriculum>
 
   <curriculum studyCode="UE 033 534" degree="bachelor" validFrom="2026-10-01">
@@ -54,11 +26,6 @@
         <title>Semistrukturierte Daten</title>
         <ects>6.0</ects>
         <courseRef number="192.041" />
-      </module>
-      <module category="compulsory">
-        <title>Datenbanksysteme</title>
-        <ects>6.0</ects>
-        <courseRef number="184.735" />
       </module>
     </examinationSubject>
   </curriculum>
