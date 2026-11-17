@@ -1,1 +1,4 @@
-<curriculumStats><curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01" title="Informatik" durationSemesters="6" declaredEcts="180" subjects="2" modules="2" moduleEcts="12"/><curriculum studyCode="UE 033 534" degree="bachelor" validFrom="2026-10-01" title="Wirtschaftsinformatik" durationSemesters="6" declaredEcts="180" subjects="1" modules="1" moduleEcts="6"/></curriculumStats>
+<curriculumStats>
+  <curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01" title="Informatik" durationSemesters="6" declaredEcts="180" subjects="2" modules="2" moduleEcts="12"/>
+  <curriculum studyCode="UE 033 534" degree="bachelor" validFrom="2026-10-01" title="Wirtschaftsinformatik" durationSemesters="6" declaredEcts="180" subjects="1" modules="1" moduleEcts="6"/>
+</curriculumStats>
