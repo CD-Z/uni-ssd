@@ -4,6 +4,15 @@
 
 Die Übung 5 besteht aus zwei Teilen. In Aufgabe 1 sollte ein nicht-triviales XML-Dokument aus dem eigenen Szenario mit XQuery abgefragt werden. In Aufgabe 2 sollten zwei XML-Dokumente miteinander verknüpft und mit XQuery neu strukturiert werden. Mein Szenario ist „TU Wien Courses and Curricula“, das bereits in den Aufgaben 3 und 4 verwendet wurde. Ich habe die Daten für Aufgabe 1 um Bewertungen erweitert und die Beispiele bewusst klein gehalten. Die Lösung liegt im Verzeichnis `aufgabe5/`.
 
+```bash
+   # einmalig herunterladen
+   curl -L -o /tmp/basex.jar https://repo1.maven.org/maven2/org/basex/basex/13.0/basex-13.0.jar
+   # eine Abfrage ausführen
+   java -cp /tmp/basex.jar org.basex.BaseX -sindent=yes ex5-t1-q1.xq
+   # Ausgabe in eine Datei
+   java -cp /tmp/basex.jar org.basex.BaseX -sindent=yes ex5-t1-q1.xq > ex5-t1-q1-out.xml                                                                                                                                                                                                                                           
+ ```   
+
 ## 2. Aufgabe 1: Abfragen eines Dokuments
 
 ### 2.1 Datenmodell
