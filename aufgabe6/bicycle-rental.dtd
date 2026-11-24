@@ -1,0 +1,28 @@
+<!ELEMENT bicycle-rental (available-bicycles,employees,active-rentals)>
+
+<!ELEMENT available-bicycles (bicycle+)>
+<!ELEMENT bicycle (#PCDATA)>
+<!ATTLIST bicycle id ID #REQUIRED>
+<!ATTLIST bicycle model CDATA #REQUIRED>
+<!ATTLIST bicycle electric (true|false) #REQUIRED>
+
+<!ELEMENT employees (employee+)>
+<!ELEMENT employee (name,service-vehicle?)>
+<!ELEMENT name (#PCDATA)>
+<!ELEMENT service-vehicle (#PCDATA)>
+<!ATTLIST employee id ID #REQUIRED>
+
+<!ELEMENT active-rentals (rental*)>
+<!ELEMENT rental ((delivery-address|station-pickup),rented-bicycle+)>
+<!ATTLIST rental rental-id ID #REQUIRED>
+<!ATTLIST rental start-date CDATA #REQUIRED>
+<!ATTLIST rental end-date CDATA #REQUIRED>
+
+<!ELEMENT delivery-address (#PCDATA)>
+<!ATTLIST delivery-address deliveredBy IDREF #REQUIRED>
+<!ELEMENT station-pickup EMPTY>
+<!ATTLIST station-pickup client-name CDATA #REQUIRED>
+
+<!ELEMENT rented-bicycle EMPTY>
+<!ATTLIST rented-bicycle bicycle IDREF #REQUIRED>
+<!ATTLIST rented-bicycle price CDATA #REQUIRED>

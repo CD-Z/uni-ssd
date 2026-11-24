@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<tuwien-catalogue>
+  <courseCatalogue semester="2026W">
+    <course number="192.134" language="de">
+      <title>Grundzüge digitaler Systeme</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+      <lecturers>
+        <lecturer id="l1">
+          <name>Anna Berger</name>
+          <email>anna.berger@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="written" weight="0.4" />
+        <assessment type="project" weight="0.6" />
+      </assessments>
+    </course>
+
+    <course number="192.041" language="de">
+      <title>Semistrukturierte Daten</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+      <lecturers>
+        <lecturer id="l3">
+          <name>Sophie Novak</name>
+          <email>sophie.novak@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="written" weight="0.4" />
+        <assessment type="project" weight="0.6" />
+      </assessments>
+    </course>
+
+    <course number="186.813" language="de">
+      <title>Algorithmen und Datenstrukturen</title>
+      <kind>VU</kind>
+      <weeklyHours>4.0</weeklyHours>
+      <ects>6.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+      <lecturers>
+        <lecturer id="l2">
+          <name>Thomas Reiter</name>
+          <email>thomas.reiter@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="written" weight="0.5" />
+        <assessment type="oral" weight="0.5" />
+      </assessments>
+    </course>
+
+    <course number="192.052" language="en">
+      <title>Datenbanksysteme</title>
+      <kind>VU</kind>
+      <weeklyHours>3.0</weeklyHours>
+      <ects>4.5</ects>
+      <deliveryMode>in-person</deliveryMode>
+      <lecturers>
+        <lecturer id="l4">
+          <name>Miriam Steiner</name>
+          <email>miriam.steiner@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="written" weight="0.7" />
+        <assessment type="project" weight="0.3" />
+      </assessments>
+    </course>
+
+    <course number="192.067" language="de">
+      <title>Web Engineering</title>
+      <kind>UE</kind>
+      <weeklyHours>2.0</weeklyHours>
+      <ects>3.0</ects>
+      <deliveryMode>hybrid</deliveryMode>
+      <lecturers>
+        <lecturer id="l3">
+          <name>Sophie Novak</name>
+          <email>sophie.novak@tuwien.ac.at</email>
+        </lecturer>
+        <lecturer id="l4">
+          <name>Miriam Steiner</name>
+          <email>miriam.steiner@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="project" weight="1.0" />
+      </assessments>
+    </course>
+
+    <course number="192.078" language="en">
+      <title>Machine Learning</title>
+      <kind>VO</kind>
+      <weeklyHours>2.0</weeklyHours>
+      <ects>3.0</ects>
+      <deliveryMode>online</deliveryMode>
+      <lecturers>
+        <lecturer id="l5">
+          <name>Lukas Wagner</name>
+          <email>lukas.wagner@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="written" weight="1.0" />
+      </assessments>
+    </course>
+
+    <course number="192.089" language="de">
+      <title>Software Engineering Projekt</title>
+      <kind>PJ</kind>
+      <weeklyHours>6.0</weeklyHours>
+      <ects>9.0</ects>
+      <deliveryMode>in-person</deliveryMode>
+      <lecturers>
+        <lecturer id="l2">
+          <name>Thomas Reiter</name>
+          <email>thomas.reiter@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="project" weight="0.8" />
+        <assessment type="presentation" weight="0.2" />
+      </assessments>
+    </course>
+
+    <course number="192.095" language="en">
+      <title>IT Security</title>
+      <kind>VU</kind>
+      <weeklyHours>3.0</weeklyHours>
+      <ects>4.5</ects>
+      <deliveryMode>hybrid</deliveryMode>
+      <lecturers>
+        <lecturer id="l1">
+          <name>Anna Berger</name>
+          <email>anna.berger@tuwien.ac.at</email>
+        </lecturer>
+        <lecturer id="l5">
+          <name>Lukas Wagner</name>
+          <email>lukas.wagner@tuwien.ac.at</email>
+        </lecturer>
+      </lecturers>
+      <assessments>
+        <assessment type="written" weight="0.6" />
+        <assessment type="project" weight="0.4" />
+      </assessments>
+    </course>
+  </courseCatalogue>
+
+  <curricula>
+    <curriculum studyCode="UE 033 521" degree="bachelor" validFrom="2026-10-01">
+      <title>Informatik</title>
+      <durationSemesters>6</durationSemesters>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject id="sub-cs">
+        <title>Computersysteme</title>
+        <module category="compulsory">
+          <title>Grundzüge digitaler Systeme</title>
+          <ects>6.0</ects>
+          <courseRef number="192.134" />
+        </module>
+        <module category="compulsory">
+          <title>Algorithmen und Datenstrukturen</title>
+          <ects>6.0</ects>
+          <courseRef number="186.813" />
+        </module>
+      </examinationSubject>
+
+      <examinationSubject id="sub-se">
+        <title>Software Engineering</title>
+        <module category="compulsory">
+          <title>Software Engineering Projekt</title>
+          <ects>9.0</ects>
+          <courseRef number="192.089" />
+        </module>
+        <module category="elective">
+          <title>Datenbanksysteme</title>
+          <ects>4.5</ects>
+          <courseRef number="192.052" />
+        </module>
+      </examinationSubject>
+    </curriculum>
+
+    <curriculum studyCode="UE 033 534" degree="bachelor" validFrom="2026-10-01">
+      <title>Wirtschaftsinformatik</title>
+      <durationSemesters>6</durationSemesters>
+      <totalEcts>180</totalEcts>
+
+      <examinationSubject id="sub-winf-ai">
+        <title>Angewandte Informatik</title>
+        <module category="compulsory">
+          <title>Semistrukturierte Daten</title>
+          <ects>6.0</ects>
+          <courseRef number="192.041" />
+        </module>
+        <module category="compulsory">
+          <title>Datenbanksysteme</title>
+          <ects>4.5</ects>
+          <courseRef number="192.052" />
+        </module>
+        <module category="elective">
+          <title>Web Engineering</title>
+          <ects>3.0</ects>
+          <courseRef number="192.067" />
+        </module>
+      </examinationSubject>
+    </curriculum>
+
+    <curriculum studyCode="UE 066 645" degree="master" validFrom="2026-10-01">
+      <title>Data Science</title>
+      <durationSemesters>4</durationSemesters>
+      <totalEcts>120</totalEcts>
+
+      <examinationSubject id="sub-ds">
+        <title>Data Science</title>
+        <module category="compulsory">
+          <title>Machine Learning</title>
+          <ects>3.0</ects>
+          <courseRef number="192.078" />
+        </module>
+        <module category="elective">
+          <title>IT Security</title>
+          <ects>4.5</ects>
+          <courseRef number="192.095" />
+        </module>
+        <module category="elective">
+          <title>Web Engineering</title>
+          <ects>3.0</ects>
+          <courseRef number="192.067" />
+        </module>
+      </examinationSubject>
+    </curriculum>
+  </curricula>
+</tuwien-catalogue>

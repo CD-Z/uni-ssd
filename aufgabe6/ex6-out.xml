@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<course-statistics semester="2026W">
+  <totals courses="8" curricula="3" weeklyHours="28.00" ects="42.00" averageEctsPerCourse="5.25" averageWeeklyHoursPerCourse="3.50"/>
+  <by-kind>
+    <kind name="PJ" courses="1" weeklyHours="6.00" ects="9.00"/>
+    <kind name="UE" courses="1" weeklyHours="2.00" ects="3.00"/>
+    <kind name="VO" courses="1" weeklyHours="2.00" ects="3.00"/>
+    <kind name="VU" courses="5" weeklyHours="18.00" ects="27.00"/>
+  </by-kind>
+  <by-language>
+    <language code="de" courses="5"/>
+    <language code="en" courses="3"/>
+  </by-language>
+  <by-delivery-mode>
+    <delivery-mode name="hybrid" courses="2"/>
+    <delivery-mode name="in-person" courses="5"/>
+    <delivery-mode name="online" courses="1"/>
+  </by-delivery-mode>
+  <lecturers>
+    <lecturer id="l1" name="Anna Berger" courses="2" ects="10.50"/>
+    <lecturer id="l2" name="Thomas Reiter" courses="2" ects="15.00"/>
+    <lecturer id="l3" name="Sophie Novak" courses="2" ects="9.00"/>
+    <lecturer id="l4" name="Miriam Steiner" courses="2" ects="7.50"/>
+    <lecturer id="l5" name="Lukas Wagner" courses="2" ects="7.50"/>
+  </lecturers>
+  <assessment-types>
+    <assessment type="oral" count="1" averageWeight="0.50"/>
+    <assessment type="presentation" count="1" averageWeight="0.20"/>
+    <assessment type="project" count="6" averageWeight="0.62"/>
+    <assessment type="written" count="6" averageWeight="0.60"/>
+  </assessment-types>
+  <curricula>
+    <curriculum studyCode="UE 033 521" degree="bachelor" title="Informatik" durationSemesters="6" totalEcts="180.00" modules="4" moduleEcts="25.50" courseRefs="4" distinctCourses="4" moduleEctsShare="14.17%"/>
+    <curriculum studyCode="UE 033 534" degree="bachelor" title="Wirtschaftsinformatik" durationSemesters="6" totalEcts="180.00" modules="3" moduleEcts="13.50" courseRefs="3" distinctCourses="3" moduleEctsShare="7.50%"/>
+    <curriculum studyCode="UE 066 645" degree="master" title="Data Science" durationSemesters="4" totalEcts="120.00" modules="3" moduleEcts="10.50" courseRefs="3" distinctCourses="3" moduleEctsShare="8.75%"/>
+  </curricula>
+  <courses>
+    <course number="192.134" title="Grundzüge digitaler Systeme" kind="VU" language="de" deliveryMode="in-person" weeklyHours="4.00" ects="6.00" lecturers="1" assessmentWeightSum="1.00" curricula="1">
+      <used-in studyCode="UE 033 521"/>
+    </course>
+    <course number="192.041" title="Semistrukturierte Daten" kind="VU" language="de" deliveryMode="in-person" weeklyHours="4.00" ects="6.00" lecturers="1" assessmentWeightSum="1.00" curricula="1">
+      <used-in studyCode="UE 033 534"/>
+    </course>
+    <course number="186.813" title="Algorithmen und Datenstrukturen" kind="VU" language="de" deliveryMode="in-person" weeklyHours="4.00" ects="6.00" lecturers="1" assessmentWeightSum="1.00" curricula="1">
+      <used-in studyCode="UE 033 521"/>
+    </course>
+    <course number="192.052" title="Datenbanksysteme" kind="VU" language="en" deliveryMode="in-person" weeklyHours="3.00" ects="4.50" lecturers="1" assessmentWeightSum="1.00" curricula="2">
+      <used-in studyCode="UE 033 521"/>
+      <used-in studyCode="UE 033 534"/>
+    </course>
+    <course number="192.067" title="Web Engineering" kind="UE" language="de" deliveryMode="hybrid" weeklyHours="2.00" ects="3.00" lecturers="2" assessmentWeightSum="1.00" curricula="2">
+      <used-in studyCode="UE 033 534"/>
+      <used-in studyCode="UE 066 645"/>
+    </course>
+    <course number="192.078" title="Machine Learning" kind="VO" language="en" deliveryMode="online" weeklyHours="2.00" ects="3.00" lecturers="1" assessmentWeightSum="1.00" curricula="1">
+      <used-in studyCode="UE 066 645"/>
+    </course>
+    <course number="192.089" title="Software Engineering Projekt" kind="PJ" language="de" deliveryMode="in-person" weeklyHours="6.00" ects="9.00" lecturers="1" assessmentWeightSum="1.00" curricula="1">
+      <used-in studyCode="UE 033 521"/>
+    </course>
+    <course number="192.095" title="IT Security" kind="VU" language="en" deliveryMode="hybrid" weeklyHours="3.00" ects="4.50" lecturers="2" assessmentWeightSum="1.00" curricula="1">
+      <used-in studyCode="UE 066 645"/>
+    </course>
+  </courses>
+</course-statistics>

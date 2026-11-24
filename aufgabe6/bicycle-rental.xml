@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE bicycle-rental SYSTEM "bicycle-rental.dtd">
+<bicycle-rental>
+  <available-bicycles>
+    <bicycle id="b1" model="City Classic" electric="false">Comfortable city bicycle</bicycle>
+    <bicycle id="b2" model="Volt City" electric="true">Electric bicycle for city trips</bicycle>
+    <bicycle id="b3" model="Alpine E" electric="true">Electric trekking bicycle</bicycle>
+    <bicycle id="b4" model="Road Swift" electric="false">Lightweight road bicycle</bicycle>
+    <bicycle id="b5" model="Family Cruiser" electric="false">Bicycle with a child seat</bicycle>
+    <bicycle id="b6" model="Cargo E" electric="true">Electric cargo bicycle</bicycle>
+    <bicycle id="b7" model="Urban E" electric="true">Electric commuter bicycle</bicycle>
+    <bicycle id="b8" model="Touring Pro" electric="false">Touring bicycle with panniers</bicycle>
+    <bicycle id="b9" model="Folding Mini" electric="false">Compact folding bicycle</bicycle>
+    <bicycle id="b10" model="Spare E" electric="true">Electric bicycle available for hire</bicycle>
+  </available-bicycles>
+  <employees>
+    <employee id="e1"><name>Anna Bauer</name><service-vehicle>Cargo bicycle</service-vehicle></employee>
+    <employee id="e2"><name>Max Huber</name><service-vehicle>Electric van</service-vehicle></employee>
+    <employee id="e3"><name>Lea Gruber</name></employee>
+    <employee id="e4"><name>Paul Fischer</name><service-vehicle>Car</service-vehicle></employee>
+  </employees>
+  <active-rentals>
+    <rental rental-id="r1" start-date="2026-05-01" end-date="2026-05-03">
+      <delivery-address deliveredBy="e1">Mariahilfer Strasse 10, Vienna</delivery-address>
+      <rented-bicycle bicycle="b1" price="9"/>
+      <rented-bicycle bicycle="b2" price="15"/>
+    </rental>
+    <rental rental-id="r2" start-date="2026-05-02" end-date="2026-05-05">
+      <station-pickup client-name="Sofia Novak"/>
+      <rented-bicycle bicycle="b3" price="18"/>
+      <rented-bicycle bicycle="b4" price="7"/>
+      <rented-bicycle bicycle="b5" price="6"/>
+    </rental>
+    <rental rental-id="r3" start-date="2026-05-03" end-date="2026-05-04">
+      <delivery-address deliveredBy="e2">Praterstrasse 25, Vienna</delivery-address>
+      <rented-bicycle bicycle="b6" price="20"/>
+    </rental>
+    <rental rental-id="r4" start-date="2026-05-04" end-date="2026-05-06">
+      <station-pickup client-name="David Weiss"/>
+      <rented-bicycle bicycle="b7" price="12"/>
+      <rented-bicycle bicycle="b8" price="8"/>
+    </rental>
+    <rental rental-id="r5" start-date="2026-05-05" end-date="2026-05-06">
+      <delivery-address deliveredBy="e1">Landstrasser Hauptstrasse 3, Vienna</delivery-address>
+      <rented-bicycle bicycle="b9" price="22"/>
+    </rental>
+  </active-rentals>
+</bicycle-rental>
